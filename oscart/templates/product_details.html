@@ -1,0 +1,95 @@
+{% extends "blank_layout.html" %}
+
+{% load static %}
+
+    {% block content%}
+
+        <!-- Product Description -->
+        {% block description %}
+            {% include "product_description.html" %}
+        {% endblock description %}
+
+
+        <!-- title -->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>Related Products</h2>
+                <p>View More</p>
+            </div>
+        </div>
+        
+        <!-- Products -->
+        <div class="small-container">
+            <div class="row">
+                <div class="col-4">
+                    <img src={% static "images/product-9.jpg" %}>
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src={% static "images/product-10.jpg" %}>
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src={% static "images/product-11.jpg" %}>
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src={% static "images/product-12.jpg" %}>
+                    <h4>Red Printed T-Shirt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- product gallery -->
+        <script>
+            var ProductImg = document.getElementById("ProductImg");
+            var SmallImg = document.getElementsByClassName("small-img");
+
+            SmallImg[0].onclick = function () {
+                ProductImg.src = SmallImg[0].src;
+            }
+            SmallImg[1].onclick = function () {
+                ProductImg.src = SmallImg[1].src;
+            }
+            SmallImg[2].onclick = function () {
+                ProductImg.src = SmallImg[2].src;
+            }
+            SmallImg[3].onclick = function () {
+                ProductImg.src = SmallImg[3].src;
+            }
+        </script>
+
+    {% endblock content %}
